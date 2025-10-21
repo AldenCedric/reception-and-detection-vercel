@@ -1,0 +1,221 @@
+[
+  {
+    "id": 0,
+    "title": "Reception and Detection",
+    "subtitle": "SNR, Noise Factor, and Distortion in Presented by Group 2",
+    "type": "title",
+    "icon": "radio"
+  },
+  {
+    "id": 1,
+    "title": "I. Signal-to-Noise Ratio (SNR)",
+    "type": "content",
+    "sections": [
+      {
+        "heading": "Definition",
+        "content": "SNR is the ratio of signal power to noise power in a communication system. It measures the quality of the received signal relative to background noise.",
+        "color": "blue"
+      },
+      {
+        "heading": "Importance",
+        "content": "Determines receiver sensitivity and signal quality. Higher SNR means clearer, more reliable communication. Critical parameter for system design and performance evaluation. Affects the ability to recover the original modulating signal.",
+        "color": "green",
+        "list": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "SNR Formulas",
+    "type": "formulas",
+    "formulas": [
+      {
+        "name": "Voltage SNR",
+        "formula": "SNR_V = V_signal / V_noise",
+        "description": "Where V represents voltage amplitudes",
+        "color": "purple"
+      },
+      {
+        "name": "Power SNR",
+        "formula": "SNR_P = P_signal / P_noise",
+        "description": "Where P represents power levels",
+        "color": "orange"
+      }
+    ],
+    "note": "Power SNR = (Voltage SNR)² when measured across the same impedance"
+  },
+  {
+    "id": 3,
+    "title": "SNR in Decibels",
+    "type": "formulas",
+    "formulas": [
+      {
+        "name": "Power-based SNR (dB)",
+        "formula": "SNR_dB = 10 log₁₀(P_signal / P_noise)",
+        "color": "indigo"
+      },
+      {
+        "name": "Voltage-based SNR (dB)",
+        "formula": "SNR_dB = 20 log₁₀(V_signal / V_noise)",
+        "color": "teal"
+      }
+    ],
+    "reasons": [
+      "Easier to work with large ranges of values",
+      "Simplifies multiplication to addition",
+      "Standard unit in telecommunications"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "II. Noise Factor and Noise Figure",
+    "type": "formulas",
+    "formulas": [
+      {
+        "name": "Noise Factor (F)",
+        "formula": "F = SNR_input / SNR_output",
+        "detail": "F = (S_in/N_in) / (S_out/N_out)",
+        "description": "The ratio of input SNR to output SNR in a device or system. It measures how much noise the device adds.",
+        "color": "red"
+      },
+      {
+        "name": "Noise Figure (NF)",
+        "formula": "NF = 10 log₁₀(F)",
+        "description": "Noise Factor expressed in decibels",
+        "color": "pink"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Application in Receiver Quality",
+    "type": "content",
+    "sections": [
+      {
+        "heading": "Key Points",
+        "color": "green",
+        "points": [
+          "Lower NF = Better receiver - Less noise added by the system",
+          "Ideal value: NF = 0 dB (F = 1) - No added noise",
+          "Practical values: NF typically ranges from 1-10 dB"
+        ]
+      },
+      {
+        "heading": "Impact on Sensitivity",
+        "color": "blue",
+        "content": "Noise Figure directly affects receiver sensitivity. A lower NF allows the receiver to detect weaker signals, which is crucial for:",
+        "points": [
+          "Long-distance communication",
+          "Low-power transmitter systems",
+          "Improving overall system performance"
+        ]
+      }
+    ],
+    "note": "The first amplifier stage in a receiver chain has the most significant impact on overall system noise figure."
+  },
+  {
+    "id": 6,
+    "title": "III. Distortion",
+    "type": "content",
+    "sections": [
+      {
+        "heading": "Definition",
+        "content": "Distortion is any unwanted change in the waveform of a signal as it passes through a system. It represents alterations to the original signal that are not caused by noise.",
+        "color": "purple"
+      },
+      {
+        "heading": "Common Causes",
+        "color": "orange",
+        "points": [
+          "Nonlinearity: Amplifiers or components that don't respond linearly",
+          "Frequency response: Unequal amplification across frequencies",
+          "Phase distortion: Different frequency components delayed differently",
+          "Intermodulation: Multiple signals mixing in nonlinear devices",
+          "Harmonic distortion: Creation of harmonic frequencies"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Distortion vs. Noise",
+    "type": "comparison",
+    "left": {
+      "title": "Distortion",
+      "color": "red",
+      "points": [
+        "Systematic and predictable",
+        "Related to the signal itself",
+        "Changes signal shape/frequency content",
+        "Caused by system nonlinearity",
+        "Can sometimes be corrected",
+        "Often frequency-dependent"
+      ]
+    },
+    "right": {
+      "title": "Noise",
+      "color": "blue",
+      "points": [
+        "Random and unpredictable",
+        "Independent of the signal",
+        "Adds unwanted components",
+        "Caused by thermal, electromagnetic sources",
+        "Difficult to remove completely",
+        "Usually broadband"
+      ]
+    },
+    "conclusion": "Key Difference: Distortion is deterministic and signal-dependent, while noise is random and signal-independent."
+  },
+  {
+    "id": 8,
+    "title": "Types of Distortion",
+    "type": "content",
+    "sections": [
+      {
+        "heading": "Undesirable Distortion",
+        "content": "Unwanted signal degradation that reduces communication quality:",
+        "color": "red",
+        "points": [
+          "Amplitude distortion in voice transmission",
+          "Intermodulation in RF receivers",
+          "Harmonic distortion in audio amplifiers",
+          "Cross-talk in communication channels"
+        ]
+      },
+      {
+        "heading": "Desirable Distortion",
+        "content": "Intentional signal modification for beneficial purposes:",
+        "color": "green",
+        "points": [
+          "Dolby Noise Reduction: Pre-emphasis and de-emphasis to reduce noise",
+          "Musical Effects: Overdrive, fuzz, and distortion pedals for creative sound",
+          "Audio Enhancement: Bass boost, treble enhancement",
+          "Signal Processing: Compression, limiting for broadcast"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Summary",
+    "type": "summary",
+    "items": [
+      {
+        "title": "Signal-to-Noise Ratio (SNR)",
+        "content": "Measures signal quality relative to noise; higher values indicate better performance. Can be expressed in voltage, power, or decibels.",
+        "color": "blue"
+      },
+      {
+        "title": "Noise Factor & Figure",
+        "content": "Quantifies noise added by receivers and amplifiers. Lower values indicate better receiver quality and sensitivity.",
+        "color": "purple"
+      },
+      {
+        "title": "Distortion",
+        "content": "Systematic changes to signal waveform. Can be undesirable (degradation) or desirable (intentional enhancement like Dolby or musical effects).",
+        "color": "orange"
+      }
+    ],
+    "conclusion": "Understanding these concepts is essential for designing and evaluating communication systems with optimal performance and signal quality."
+  }
+]

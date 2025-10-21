@@ -1,16 +1,16 @@
 {
-  "name": "express",
+  "name": "reception-and-detection-vercel",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "SNR, Noise Factor & Distortion Presentation",
+  "main": "api/slides.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel"
+  },
   "dependencies": {
-    "@types/express": "^5.0.0",
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0"
+    "vercel": "^32.0.0"
   }
 }

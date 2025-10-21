@@ -1,9 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: system-ui, sans-serif;
-    margin: 2rem;
-    line-height: 1.5;
-  }
-  nav a {
-    margin-right: 1rem;
-  }
-  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e5e7eb 100%);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.slide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 3rem;
+    min-height: 600px;
+}
+
+.title-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    min-height: 500px;
+}
+
+.title-slide .icon {
+    width: 96px;
+    height: 96px;
+    color: #2563eb;
+    margin-bottom: 2rem;
+}
+
+.title-slide h1 {
+    font-size: 3rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.title-slide h2 {
+    font-size: 1.875rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.title-slide p {
+    font-size: 1.25rem;
+    color: #9ca3af;
+}
+
+/* Content Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #1e40af;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.section {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section.blue { background-color: #dbeafe; }
+.section.green { background-color: #d1fae5; }
+.section.purple { background-color: #e9d5ff; }
+.section.orange { background-color: #fed7aa; }
+.section.red { background-color: #fee2e2; }
+.section.pink { background-color: #fce7f3; }
+.section.indigo { background-color: #e0e7ff; }
+.section.teal { background-color: #ccfbf1; }
+.section.yellow { background-color: #fef3c7; }
+
+.section.blue h2, .section.blue h3 { color: #1e40af; }
+.section.green h2, .section.green h3 { color: #065f46; }
+.section.purple h2, .section.purple h3 { color: #6b21a8; }
+.section.orange h2, .section.orange h3 { color: #c2410c; }
+.section.red h2, .section.red h3 { color: #991b1b; }
+.section.pink h2, .section.pink h3 { color: #9f1239; }
+.section.indigo h2, .section.indigo h3 { color: #3730a3; }
+.section.teal h2, .section.teal h3 { color: #0f766e; }
+.section.yellow h2, .section.yellow h3 { color: #a16207; }
+
+.section p, .section li {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.75;
+}
+
+.section ul {
+    list-style-position: inside;
+    margin-top: 0.75rem;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}
+
+.formula-box {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.formula-box.purple { border: 2px solid #a855f7; }
+.formula-box.orange { border: 2px solid #fb923c; }
+.formula-box.indigo { border: 2px solid #6366f1; }
+.formula-box.teal { border: 2px solid #14b8a6; }
+.formula-box.red { border: 2px solid #ef4444; }
+.formula-box.pink { border: 2px solid #ec4899; }
+
+.formula {
+    font-size: 1.875rem;
+    font-family: 'Courier New', monospace;
+    margin: 0.5rem 0;
+}
+
+.formula-description {
+    color: #6b7280;
+    margin-top: 0.75rem;
+}
+
+.note-box {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.note-box p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-item {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.comparison-item h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.comparison-item ul {
+    list-style: none;
+}
+
+.comparison-item li::before {
+    content: "✓ ";
+    color: inherit;
+    font-weight: bold;
+}
+
+.conclusion {
+    background: linear-gradient(to right, #fef3c7, #fed7aa);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.conclusion p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.summary-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-item {
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.summary-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-conclusion {
+    background: linear-gradient(to right, #dbeafe, #e9d5ff);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.summary-conclusion p {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.navigation {
+    background-color: #1f2937;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-controls {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.nav-button:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+}
+
+.slide-info {
+    text-align: center;
+}
+
+.counter {
+    font-size: 0.875rem;
+    color: #d1d5db;
+}
+
+.slide-title-nav {
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.indicator-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicator-dot.active {
+    background-color: #3b82f6;
+    width: 2rem;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem;
+    }
+
+    .slide-container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title-slide h1 {
+        font-size: 2rem;
+    }
+
+    .title-slide h2 {
+        font-size: 1.5rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-button span {
+        display: none;
+    }
+
+    .nav-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
