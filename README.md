@@ -16,12 +16,12 @@ http://localhost:3000
 
 ## 1. Install Vercel CLI (if not already installed):
 ```bash
-vercel login
+npm install -g vercel
 ```
 
 ## 2. Login to Vercel:
 ```bash
-npm install -g vercel
+vercel login
 ```
 
 ## 3. Deploy:
