@@ -5,7 +5,8 @@
   "main": "api/slides.js",
   "scripts": {
     "dev": "vercel dev",
-    "deploy": "vercel"
+    "build": "vercel build",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "express": "^4.18.2"
